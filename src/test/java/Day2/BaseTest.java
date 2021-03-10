@@ -6,6 +6,7 @@ import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -18,6 +19,7 @@ public class BaseTest {
     @BeforeClass
     public void setupClass() {
         DOMConfigurator.configure("log4j.xml");
+        //WebDriverWait wait = new WebDriverWait(driver, 10);
     }
 
     @BeforeMethod
@@ -33,7 +35,7 @@ public class BaseTest {
         logger.trace("Trying to kill browser instance");
         // Kill driver
         driver.close(); // closes a window
-        driver.quit(); // kills an driver instance
+        driver.quit(); // kills a driver instance
         logger.info("Browser instance killed.");
     }
 

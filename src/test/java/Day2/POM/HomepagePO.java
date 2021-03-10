@@ -21,6 +21,11 @@ public class HomepagePO extends BasePO {
     @FindBy(xpath = "//a[@title='Dresses'][1]")
     private WebElement menuWomenDisplayed;
 
+    //@FindBy(css = "Contact us")
+    //@FindBy(partialLinkText = "Contact us")
+    @FindBy(id = "contact-link")
+    private WebElement contactUsLink;
+
     public HomepagePO(WebDriver driver) {
         super(driver);
     }
@@ -28,6 +33,11 @@ public class HomepagePO extends BasePO {
     public HomepagePO visitHomePage() {
         logger.trace("Open homepage");
         driver.get(URL_HOMEPAGE);
+        return this;
+    }
+
+    public HomepagePO clickContactUs() {
+        contactUsLink.click();
         return this;
     }
 

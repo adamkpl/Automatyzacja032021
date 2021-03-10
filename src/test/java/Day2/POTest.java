@@ -29,4 +29,17 @@ public class POTest extends BaseTest {
         Assert.assertTrue(actual);
     }
 
+//    @Test
+//    public void addProductToCartTest() {
+//        //given
+//        HomepagePO homepagePO = new HomepagePO(driver);
+//        //when
+//
+//
+//        //then
+//        Assert.assertTrue(actual);
+//    }
+
+
+
 }
