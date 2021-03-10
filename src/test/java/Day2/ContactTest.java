@@ -17,7 +17,7 @@ public class ContactTest extends BaseTest {
         //given
         homepagePO.visitHomePage().clickContactUs();
         //when
-        contactPO.contactFormIsDisplayed();
+        Assert.assertTrue(contactPO.contactFormIsDisplayed());
         //then
         Assert.assertTrue(contactPO.sendMsgButtonIsDisplayed());
         Assert.assertTrue(contactPO.emailIsDisplayed());
